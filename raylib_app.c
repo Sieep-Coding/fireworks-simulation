@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "firework.h"
 
-void initFirwork(Firework *firework, int screenWidth, int screenHeight)
+void initFirework(Firework *firework, int screenWidth, int screenHeight)
 {
     firework->position = (Vector2){GetRandomValue(screenWidth / 4, 3 * screenWidth / 4), screenHeight};
     firework->speed = (Vector2){(float)GetRandomValue(-20, 20) / 10.0f, -(float)GetRandomValue(20, 50) / 10.0f};
