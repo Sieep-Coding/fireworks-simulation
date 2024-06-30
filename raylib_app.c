@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdlib.h>
+#include <raylib.h>
 #include "firework.h"
 
 void initFirework(Firework *firework, int screenWidth, int screenHeight)
@@ -20,7 +21,8 @@ void initFirework(Firework *firework, int screenWidth, int screenHeight)
     }
 }
 
-void UpdateFirework(Firework *firework, int screenWidth, int screenHeight) {
+void UpdateFirework(Firework *firework, int screenWidth, int screenHeight) 
+{
     if (!firework->exploded) {
         firework->position.x += firework->speed.x;
         firework->position.y += firework->speed.y;
@@ -47,7 +49,8 @@ void UpdateFirework(Firework *firework, int screenWidth, int screenHeight) {
     }
 }
 
-void DrawFirework(Firework *firework) {
+void DrawFirework(Firework *firework) 
+{
     if (!firework->exploded) {
         DrawCircleV(firework->position, 5, firework->color);
     } else {
